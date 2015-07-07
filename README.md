@@ -21,3 +21,15 @@ The fake image data is in `worm-spine-blurred.tiff`.  It was generated via a
 SVG spline drawn by hand (in `worm-spine-shape.svg`), which was then blurred and 
 had the contrast adjusted before being saved as an uncompressed 8-bit grayscale 
 TIFF.
+
+Each example language should have its own `ABOUT.md` file that details how to
+compile and/or run the example.  There may be different platform-specific
+instructions in this file, if necessary (and anyone has tried the example on
+different platforms, and reported their findings on how to get it to work).
+There will also typically be notes on which versions of programs and libraries
+have been verified to work.
+
+## References
+
+[HDF5 Image Specification](https://www.hdfgroup.org/HDF5/doc/ADGuide/ImageSpec.html)
+[HDF5 Image Tutorial](https://www.hdfgroup.org/HDF5/Tutor/h5image.html)
