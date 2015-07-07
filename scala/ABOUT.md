@@ -14,8 +14,7 @@ and then compile it.  You may be able to download it with a package manager.
 (Ubuntu has it as `libhdf5-dev`; Mac has it on homebrew as `hdf5`.)
 
 4. The [Java wrapper for HDF5](https://www.hdfgroup.org/products/java/release/downloadsrc.html).
-(On Ubuntu, you can get it as `libjhdf5-jni` and `libjhdf5-java`, but you probably want to download it anyway
-since it's nice to have the full source as an example.)
+(On Ubuntu, you can get it by installing the `hdfview` package.)
 
 Note that if Java doesn't know where to look for the C libraries, it won't work:
 the HDF Group does not and does not plan to support a pure Java
@@ -40,6 +39,18 @@ and [some example programs](https://www.hdfgroup.org/HDF5/examples/api18-java.ht
 
 
 ## How to compile and run
+
+You first need to copy or add links to all the hdf jars to the `lib` directory (create it if it doesn't exist).
+On my system they are the following
+
+```
+jhdf4obj.jar
+jhdf5.jar
+jhdf5obj.jar
+jhdf.jar
+jhdfobj.jar
+jhdfview.jar
+```
 
 To compile the project, if SBT is correctly configured, you need only type `sbt compile` at the command-line.
 
