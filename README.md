@@ -32,5 +32,7 @@ have been verified to work.
 ## References
 
 [HDF5 Image Specification](https://www.hdfgroup.org/HDF5/doc/ADGuide/ImageSpec.html)
+
 [HDF5 Image Tutorial](https://www.hdfgroup.org/HDF5/Tutor/h5image.html)
+
 [HDF5 User's Guide](https://www.hdfgroup.org/HDF5/doc/UG/index.html)
