@@ -2,6 +2,8 @@
 
 This sub-project shows how to read and write HDF5 files in Scala.
 
+Primary Author: Rex Kerr
+
 ## What you will need
 
 1. Java SE.  You can get it from [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html).
