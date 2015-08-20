@@ -13,9 +13,9 @@ OpenJDK versions should be fine also.  Java 6 should be okay, but thus far the p
 
 3. The C version of HDF5 installed properly.  You can get it from [the HDF Group](https://www.hdfgroup.org/HDF5/release/obtain5.html)
 and then compile it.  You may be able to download it with a package manager.
-(Ubuntu has it as `libhdf5-dev`; Mac has it on homebrew as `hdf5`.)
+(Ubuntu has it as `libhdf5-dev`; Mac has it on homebrew as `homebrew/science/hdf5`.)
 
-4. The [Java wrapper for HDF5](https://www.hdfgroup.org/products/java/release/downloadsrc.html).
+4. The [Java wrapper for HDF5](https://www.hdfgroup.org/products/java/release/download.html).
 (On Ubuntu, you can get it by installing the `hdfview` package.)
 
 Note that if Java doesn't know where to look for the C libraries, it won't work:
@@ -56,13 +56,17 @@ jhdfview.jar
 
 To compile the project, if SBT is correctly configured, you need only type `sbt compile` at the command-line.
 
-To run the project, you will need to make sure Java can find the HDF5 binaries.  In my case, the following worked:
+To run the project, you will need to make sure Java can find the HDF5 binaries.  In my case, the following worked on Ubuntu 14.04:
 
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni
 ```
 
-because that is where the `libjhdf5.so` file is located on my system.  Locations may be different on Windows and Mac, or may just work.
+because that is where the `libjhdf5.so` file is located on my system.
+
+On Mac OS X, I copied the `.dylib` files from Resources/lib in the Mac OS HDF-Java distribution into `Library/Java/Extensions` in my home directory.  No combination of `DYLD_LIBRARY_PATH` and other things seemed to work.
+
+Locations may be different on Windows and Mac, or may just work.
 
 To run the example, use `sbt run` (once the library path includes the HDF5 binary library).  It will compile the code if needed.
 
